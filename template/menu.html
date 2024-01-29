@@ -1,0 +1,399 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PLATTERS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css'%}" /></noscript>
+	</head>
+	<body class="is-preload">
+		{%block content%}
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{%url 'index'%}">TheCatering</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{%url 'index'%}">Home</a></li>
+							<li>
+								<a href="#">Amenities</a>
+								<ul>
+									<li><a href="{%url 'packages'%}">Packages</a></li>
+									<li><a href="{%url 'menu'%}">Platters</a></li>
+									<li><a href="{%url 'supplies'%}">Supplies</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{%url 'events'%}">Events</a></li>
+							<li><a href="{%url 'aboutus' %}">About us</a></li>
+							<li><a href="{%url 'contactus' %}">Contact us</a></li>
+							<li><a href="{%url 'signup'%}" class="button primary">Sign Up</a></li>
+							<li><a href="{%url 'signup'%}" class="button primary">Sign In</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>P L A T T E R</h2>
+							<p><i>Make your own dish.</i></p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+
+							<section>
+								<h3>1</h3>
+								<h4>PUNJABI FOOD</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name </th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Paneer_Butter_Masala</td>
+												<td>Paneer Butter Masala/Paneer Makhani is combines paneer (Indian cottage cheese) in a butter sauce quite similar to butter chicken.</td>
+												<td>160 <br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Paneer Balti</td>
+												<td>Fresh soft chunks of paneer in a bucket of spicy tomato gravy taste absolutely incredible in this paneer curry recipe. This is a semi-rich paneer curry made with freshly toasted and ground whole spices served in a special dish which is known as called Balti.</td>
+												<td>180<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Paneer Toofani</td>
+												<td> Rich vegetable curry made with Paneer and Tomato based spicy gravy with Indian curry spices. It is rich, creamy, smooth and delicious.</td>
+												<td>180<br><button style="background-color: bisque;">Buy</button></td>												
+											</tr>
+											<tr>
+												<td>Kaju Curry</td>
+												<td>The kaju masala curry is rich, creamy and on the sweeter side. Its also mild and not spicy, so good for kids. Whole cashews as well as powdered cashews are added in the recipe. The gravy is tomato based one and is similar to the Paneer butter masala gravy I make. Garlic is added, but you can easily skip garlic and make a no onion no garlic version.</td>
+												<td>180<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Paneer Pasanda</td>
+												<td>Paneer Pasanda is paneer triangles stuffed with rich khoya mixture and then shallow fried in a thick, creamy, tomato-based gravy.</td>
+												<td>180<br><button style="background-color: bisque;">Buy</button></td>											
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+
+							<section>
+								<h3>2</h3>
+								<h4>TANDOORI DAWAT</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name </th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Roti</td>
+												<td>Plain/Butter/Missi</td>
+												<td>35<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Naan</td>
+												<td>Kashmiri/Stuffed/Hariyali/Cheese/Garlic/Chilly/Onion</td>
+												<td>70<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Kulcha</td>
+												<td>Plain/Butter/Stuffed/Lachadar/Onion</td>
+												<td>65<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Paratha</td>
+												<td>Plain/Butter/Stuffed</td>
+												<td>45<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Veg Tandoori Tokri</td>
+												<td>-</td>
+												<td>200<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+							
+							<section>
+								<h3>3</h3>
+								<h4>CHINESE FOOD</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name </th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Veg. Manchurian</td>
+												<td>Dry/Gravy/Paneer</td>
+												<td>160<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Noodles</td>
+												<td>Hakka/Chilly Garlic/Schezwan</td>
+												<td>150<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Chinese Bhel</td>
+												<td>-</td>
+												<td>140<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>American Chopsey</td>
+												<td>-</td>
+												<td>140<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Paneer Chilly</td>
+												<td>Dry/Gravy</td>
+												<td>155<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+							
+							<section>
+								<h3>4</h3>
+								<h4>SOUP</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name </th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tomato Soup</td>
+												<td>-</td>
+												<td>90<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Hot and Sour Veg.</td>
+												<td>-</td>
+												<td>80<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Cheese Corn Tomato Soup</td>
+												<td>-</td>
+												<td>100<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Veg. Manchow Soup</td>
+												<td>-</td>
+												<td>80<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Noodle Soup</td>
+												<td>-</td>
+												<td>80<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+
+							<section>
+								<h3>5</h3>
+								<h4>SALAD/RAITA/PAPAD</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name </th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Green Salad</td>
+												<td>-</td>
+												<td>50<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Tomato Dish</td>
+												<td>-</td>
+												<td>30<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Butter Milk</td>
+												<td>-</td>
+												<td>20<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Papad</td>
+												<td>Roasted/Fried/Masala</td>
+												<td>25<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Raita</td>
+												<td>Bundi/Pineapple/Mix-veg</td>
+												<td>60<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+
+							<section>
+								<h3>6</h3>
+								<h4>PIZZA</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Vegetable Pizza</td>
+												<td>-</td>
+												<td>110<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Italian Pizza</td>
+												<td>-</td>
+												<td>105<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Double Cheeze Pizza</td>
+												<td>-</td>
+												<td>125<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Chilly Gaarlic Pizza</td>
+												<td>-</td>
+												<td>115<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Pineapple Pizza</td>
+												<td>-</td>
+												<td>125<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+							
+							<section>
+								<h3>7</h3>
+								<h4>SOUTH INDIAN</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description </th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Dosa</td>
+												<td>Plain/Masala/Mysore Plain/Mysore Masala/Oil/Butter/Cheese/Chilly Garlic</td>
+												<td>160<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Uttapam</td>
+												<td>Masala/Veg/Tomato/Onion/Mix</td>
+												<td>170<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Sambhar Idli</td>
+												<td>-</td>
+												<td>60<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Sambhar Vada</td>
+												<td>-</td>
+												<td>60<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+											<tr>
+												<td>Fry Idli</td>
+												<td>-</td>
+												<td>70<br><button style="background-color: bisque;">Buy</button></td>
+											</tr>
+										</tbody>
+										
+									</table>
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>M I S C E L L A N E O U S</h3>
+											<p>You can come up with your customized menu, and we are lovingly ready to serve you a mouth-watering dish. We have expert chefs who can cook your favourite cuisine.  </p>
+											<p><b>NOTE -</b> &ensp;Price might vary depending upon the number of people. <br>For queries, contact us.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="{%url 'contactus' %}" class="button">Contact us</a></li>
+												</ul>
+											</footer>
+										</section>
+										<hr />
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{%static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.scrolly.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.dropotron.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.scrollex.min.js'%}"></script>
+			<script src="{%static 'assets/js/browser.min.js'%}"></script>
+			<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+			<script src="{%static 'assets/js/util.js'%}"></script>
+			<script src="{%static 'assets/js/main.js'%}"></script>
+	{%endblock%}	
+	</body>
+</html>

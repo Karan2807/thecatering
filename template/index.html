@@ -1,0 +1,215 @@
+{% load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TheCatering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+			{%block content%}
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{%url 'index'%}">TheCatering</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{%url 'index'%}">Home</a></li>
+							<li>
+								<a href="#">Amenities</a>
+								<ul>
+									<li><a href="{%url 'packages'%}">Packages</a></li>
+									<li><a href="{%url 'menu'%}">Platters</a></li>
+									<li><a href="{%url 'supplies'%}">Supplies</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{%url 'events'%}">Events</a></li>
+							<li><a href="{%url 'aboutus'%}">About US</a></li>
+							<li><a href="{%url 'contactus'%}">Contact US</a></li>
+		
+
+							{% if user.is_authenticated %}
+							<li>Hello,{{user.first_name}}</li>
+							<li><a href="{%url 'logout'%}" class="button primary">Logout</a></li>
+							{%else%}
+							<li><a href="{%url 'signup'%}" class="button primary">Sign Up</a></li>
+							<li><a href="{%url 'login'%}" class="button primary">Sign In</a></li>
+							{%endif%}
+
+
+							
+
+						</ul>
+					</nav>
+				</header> 
+				{%endblock%}
+			<!-- Banner -->
+			
+				<section id="banner">
+					
+					<div class="content">
+						<header>
+							<h2>Welcome to the world of Delicacies!</h2>
+							<p>Let food be thy medicine, <br />
+							and medicine be thy food.</p>
+						</header>
+						<span class="image"><img src="{%static 'images/pic01.jpg'%}" alt="" height="320px" /></span>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="{%static 'images/pic02.jpg'%}" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<header>
+										<h2>Hey Gourmets,</h2>
+										<p>TheCatering server scrumptious food in any occasion. Name an occassion and we are there for you.	</p>
+									</header>
+								</div>
+								<div class="col-4 col-12-medium">
+									<p>TheCatering has been fulling belly desires of the people since 5 years. And we caters the best to our customers in marriages, receptions, birthday parties, product launches, baby showers, corporate companies, private dinners, funerals, and any other occasion.</p>
+								</div>
+								<div class="col-4 col-12-medium">
+									<p>We, TheCatering, have the best team to cater your favourite food item on your platter. Punjabi, South-Indian, Gujarati, Italian, Chinese, Mexican and any of your favourites. We have the best chefs who can make such luscious food that will water your mouth, and fulfil your bellies.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Two -->
+				<section id="two" class="spotlight style2 right">
+					<span class="image fit main"><img src="{%static 'images/pic03.jpg'%}" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Services</h2>
+							<p>TheCatering is happy to serve you anywhere in Surat.</p>
+						</header>
+						<p> TheCatering provides services and deliveries to your place. We make and manage the entire occasion by making food at your venue, or just by delivering food to your venue, as per your demand.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Three -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="{%static 'images/pic04.jpg'%}" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Offices</h2>
+							<p>205, Shashikiran Apt, <br> Kailashnagar opp. JP Khaman, <br>Surat 395002.</p>
+						</header>
+						<p>For more discussions, we can set up a rendezvous at your desired place. </p>
+						<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
+				
+
+			<!-- Four -->
+				<section id="four" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Where the <strong><i>belly</i></strong> rules the mind!</h2>
+							<p><i>Good food never fail in bringing people together.</i></p>
+						</header>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-chart-area"></span>
+									<h3>Mukesh Jhaveri</h3>
+									<p>Owner</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-comment"></span>
+									<h3>Nilam Jhaveri</h3>
+									<p>Owner</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-flask"></span>
+									<h3>Parth Jhaveri</h3>
+									<p>Co-owner</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-paper-plane"></span>
+									<h3>Karan Bhatt</h3>
+									<p>Developer</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-file"></span>
+									<h3>Vishal Jhaveri</h3>
+									<p>Developer</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-beer"></span>
+									<h3>Manav Desai</h3>
+									<p>Developer</p>
+								</section>
+							</div>
+						</div>
+						<footer class="major">
+							<ul class="actions special">
+								<li><a href="#" class="button">H O M E	</a></li>
+							</ul>
+						</footer>
+					</div>
+				</section>
+
+			<!-- Five -->
+				<section id="five" class="wrapper style2 special fade">
+					<div class="container">
+						<header>
+							<h2>Subscribe @TheCatering</h2>
+							
+						</header>
+						<form method="post" action="#" class="cta">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+                
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{%static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.scrolly.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.dropotron.min.js'%}"></script>
+			<script src="{%static 'assets/js/jquery.scrollex.min.js'%}"></script>
+			<script src="{%static 'assets/js/browser.min.js'%}"></script>
+			<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+			<script src="{%static 'assets/js/util.js'%}"></script>
+			<script src="{%static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>

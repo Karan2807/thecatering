@@ -1,0 +1,143 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css' %}" /></noscript>
+    <title>Sign Up</title>
+</head>
+<body>
+        {%block content%}
+        <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="{%url 'index'%}">TheCatering</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="{%url 'index'%}">Home</a></li>
+                        <li>
+                            <a href="#">Amenities</a>
+                            <ul>
+                                <li><a href="{%url 'packages'%}">Packages</a></li>
+                                <li><a href="{%url 'menu'%}">Platters</a></li>
+                                <li><a href="{%url 'supplies'%}">Supplies</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="{%url 'events'%}">Events</a></li>
+						<li><a href="{%url 'aboutus'%}">About US</a></li>
+						<li><a href="{%url 'contactus'%}">Contact US</a></li>
+                        <li><a href="{%url 'signup'%}" class="button primary">Sign Up</a></li>
+                        <li><a href="{%url 'login'%}" class="button primary">Sign In</a></li>
+						
+
+                    </ul>
+                </nav>
+            </header>          
+
+	<!-- Main div code -->
+	<form action="signup" method="POST">	
+	{%csrf_token%}
+	<div id="main">
+	<div class="h-tag">
+	<h2>Create Your Account</h2>
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Name :</td>
+	<td><input type="text" name="name" placeholder="Enter user here" id="t1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" name="email" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" name="username" placeholder="Enter Username here" id="t3" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" name="pass1" placeholder="Enter Password here" id="t4" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Confirm Password :</td>
+	<td><input type="password" name="pass2" placeholder="Enter Password here" id="t5" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+	<input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+	</tr>
+	</table>
+	</div>
+	<!-- create account box ending here.. -->
+	</div>
+</form>
+<div>
+	{%for message in messages%}
+	<h3> {{message}} </h3>
+	{%endfor%}
+</div>
+    <style type="text/css">
+        body
+        {
+            margin:0px;
+            background-image:url(image/background.jpg);
+            color:#f9fcf5;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        
+        #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+         padding-left:10px; margin-top:100px;   padding-top:20px;
+        }
+        
+        #main table{font-family:"Comic Sans MS", cursive; border: 0px;}
+        /* css code for textbox */
+        #main .tb{height:28px; width:230px;  color:white; font-weight:bold; opacity:0.9;}
+        
+        #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+    
+        /* css code for button*/
+        #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid; 
+        text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: white; letter-spacing: 1px; 
+        font-size:14px; background-color:grey; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+      
+        #main .btn:hover{background-color:rgb(100, 70, 70); outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #aa7979;
+        -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }
+    
+    
+    
+    </style>
+
+            <!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+
+  <!-- Scripts -->
+  <script src="{%static 'assets/js/jquery.min.js' %}"></script>
+  <script src="{%static 'assets/js/jquery.scrolly.min.js'%}"></script>
+  <script src="{%static 'assets/js/jquery.dropotron.min.js'%}"></script>
+  <script src="{%static 'assets/js/jquery.scrollex.min.js' %}"></script>
+  <script src="{%static 'assets/js/browser.min.js' %}"></script>
+  <script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+  <script src="{%static 'assets/js/util.js' %}"></script>
+  <script src="{%static 'assets/js/main.js'%}"></script>
+ {%endblock%}   
+</body>
+</html>

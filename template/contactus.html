@@ -1,0 +1,108 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CONTACT US</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{%static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		{%block content%}
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{%url 'index' %}">TheCatering</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{%url 'index' %}">Home</a></li>
+							<li>
+								<a href="#">Amenities</a>
+								<ul>
+									<li><a href="{%url 'packages' %}">Packages</a></li>
+									<li><a href="{%url 'menu' %}">Platters</a></li>
+									<li><a href="{%url 'supplies' %}">Supplies</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{%url 'events' %}">Events</a></li>
+							<li><a href="{%url 'aboutus' %}">About us</a></li>
+							<li><a href="{%url 'contactus' %}">Contact us</a></li>
+							<li><a href="{%url 'signup'%}" class="button primary">Sign Up</a></li>
+							<li><a href="{%url 'login'%}" class="button primary">Sign In</a></li>
+						
+
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>C O N T A C T &ensp; U S</h2>
+							<p>We'd love to hear from you.<br><br>Contact <b>TheCatering</b> for delivered catering and events in Surat. Give us a call so that we can assist you with your inquiry. Orders must be placed online or via email by 3pm to guarantee next day delivery.<br><br>We welcome enquiries and feedback from all types of industries and anyone interested in TheCatering. <br>Contact us on the following details:</p>
+						</header>
+							<p align="center"><b>Delivered/Drop Off Catering &ensp; & &ensp; Orders/Quotes/Enquiries<br><br> 9377614452 <br> thecatering@gmail.com</b></p>
+						
+					</div>
+				</div>
+
+				<div class="container">
+					<h3>Please Leave your Queries Here!!</h3>
+					<form action="contactus" method="post">{% csrf_token %}
+				 <div class="form-group">
+				   <label for="name">Name</label>
+				   <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+				 </div>
+						 <div class="form-group">
+				   <label for="name">Email</label>
+				   <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+				 </div>
+				<div class="form-group">
+				   <label for="phone">Phone</label>
+				   <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+				 </div>
+						 <div class="form-group">
+				  <div class="form-group">
+				   <label for="desc">How May We Help You ?</label>
+				   <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+				 </div> <br>
+				 <button type="submit" class="button small">Submit</button>
+				   </div>
+				 <div>
+					{%for message in messages%}
+					<h3> {{message}} </h3>
+					{%endfor%}
+				</div>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{%static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{%static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{%static 'assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{%static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{%static 'assets/js/browser.min.js' %}"></script>
+			<script src="{%static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{%static 'assets/js/util.js' %}"></script>
+			<script src="{%static 'assets/js/main.js' %}"></script>
+	{%endblock%}	
+	</body>
+</html>
